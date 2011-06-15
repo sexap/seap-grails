@@ -1,6 +1,8 @@
 import com.seap.Role
 import com.seap.User
 import com.seap.UserRole
+import com.seap.Dificultad
+import com.seap.TipoActividad
 
 class BootStrap {
 
@@ -33,8 +35,23 @@ class BootStrap {
 			assert Role.count() == 3
 			assert UserRole.count() == 3
 		}
-    
 		
+		if(!Dificultad.count()){
+			new Dificultad(dificultad: "Principiante").save(flush: true)
+			new Dificultad(dificultad: "Intermedio").save(flush: true)
+			new Dificultad(dificultad: "Avanzado").save(flush: true)
+			
+			assert Dificultad.count() == 3
+		}
+		
+		if(!TipoActividad.count()){
+			new TipoActividad(tipoActividad: "Tarea").save(flush:true)
+			new TipoActividad(tipoActividad: "Examen").save(flush:true)
+			new TipoActividad(tipoActividad: "Ejercicios").save(flush:true)
+			
+			assert TipoActividad.count() == 3
+		}
+    
 	}
 	
     def destroy = {
