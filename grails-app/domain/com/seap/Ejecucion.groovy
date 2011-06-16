@@ -1,5 +1,7 @@
 package com.seap
 
+import java.util.Date
+
 class Ejecucion {
 	
 	String codigoFuente
@@ -12,8 +14,9 @@ class Ejecucion {
 	static belongsTo = [usuario:User,problema:Problema]
 
     static constraints = {
-		codigoFuente blank:false
-		lenguaje
-		veredicto blank:false
+		codigoFuente (blank:false)
+		veredicto (blank:false)
+		lenguaje ()
+		veredicto (blank:false)
     }
 }

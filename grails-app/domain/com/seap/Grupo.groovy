@@ -13,6 +13,6 @@ class Grupo {
 	static hasMany = [alumnos:User,profesores:User,actividades:Actividad] 
 
     static constraints = {
-		nombreGrupo blank:false
+		nombreGrupo (blank:false)
     }
 }

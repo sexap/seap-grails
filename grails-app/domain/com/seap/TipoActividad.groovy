@@ -5,6 +5,6 @@ class TipoActividad {
 	String tipoActividad
 	
     static constraints = {
-		tipoActividad blank:false,unique:true
+		tipoActividad (blank:false,unique:true)
     }
 }

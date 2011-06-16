@@ -2,9 +2,9 @@ package com.seap
 
 class Dificultad {
 	
-	String dificultad
+	String nombreDificultad
 	
     static constraints = {
-		dificultad blank:false, unique:true
+		nombreDificultad (blank:false, unique:true)
     }
 }

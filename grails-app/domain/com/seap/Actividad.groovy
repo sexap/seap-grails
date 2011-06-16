@@ -1,5 +1,7 @@
 package com.seap
 
+import java.util.Date
+
 class Actividad {
 	
 	String nombreActividad
@@ -15,13 +17,13 @@ class Actividad {
 	
 	
     static constraints = {
-		nombreActividad blank:false
-		descripcion blank:false
-		tema blank:false
-		unidad blank:false
-		fechaInicio
-		fechaFin
-		dificultad
-		tipoActividad
+		nombreActividad (blank:false)
+		descripcion (blank:false)
+		tema (blank:false)
+		unidad (blank:false)
+		fechaInicio ()
+		fechaFin ()
+		dificultad ()
+		tipoActividad ()
     }
 }

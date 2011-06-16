@@ -1,11 +1,11 @@
 package com.seap
 
 class Uea {
-	String uea
+	String nombreUea
 	String departamento
     
 	static constraints = {
-		uea blank:false, unique:true
-		departamento blank:false
+		nombreUea (blank:false, unique:true)
+		departamento (blank:false)
     }
 }

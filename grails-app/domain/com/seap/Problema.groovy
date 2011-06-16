@@ -1,5 +1,7 @@
 package com.seap
 
+import java.util.Date
+
 class Problema {
 	
 	String tituloProblema
@@ -20,13 +22,13 @@ class Problema {
 	//memoria
 
     static constraints = {
-		tituloProblema blank:false,unique:true
-		enunciadoProblema blank:false
-		ueas
-		dificultad
-		palabrasClave blank:false
-		observaciones blank:false
-		autor display:false
-		privado
+		tituloProblema (blank:false,unique:true)
+		enunciadoProblema (blank:false)
+		ueas ()
+		dificultad ()
+		palabrasClave (blank:false)
+		observaciones (blank:false)
+		autor (display:false)
+		privado ()
     }
 }

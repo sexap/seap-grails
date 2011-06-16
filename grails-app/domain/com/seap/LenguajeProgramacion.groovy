@@ -5,6 +5,6 @@ class LenguajeProgramacion {
 	String nombreLenguajeProgramacion
 	
     static constraints = {
-		nombreLenguajeProgramacion blank:false, unique:true
+		nombreLenguajeProgramacion (blank:false, unique:true)
     }
 }
